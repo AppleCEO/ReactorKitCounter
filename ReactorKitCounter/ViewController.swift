@@ -10,6 +10,9 @@ import ReactorKit
 import RxCocoa
 
 class CounterViewController: UIViewController, View {
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var minusButton: UIButton!
+    @IBOutlet weak var plusButton: UIButton!
     var disposeBag: RxSwift.DisposeBag = DisposeBag()
 
     func bind(reactor: CounterReactor) {
