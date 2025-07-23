@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import ReactorKit
+import RxCocoa
 
-class ViewController: UIViewController {
+class CounterViewController: UIViewController, View {
+    var disposeBag: RxSwift.DisposeBag = DisposeBag()
 
+    func bind(reactor: CounterReactor) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
