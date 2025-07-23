@@ -18,7 +18,7 @@ final class CounterReactor: Reactor {
     }
     
     struct State {
-        
+        var count = 0
     }
     
     var initialState: State = State()

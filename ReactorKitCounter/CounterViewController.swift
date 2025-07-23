@@ -26,6 +26,12 @@ class CounterViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        reactor.state.map { $0.count }
+            .distinctUntilChanged()
+            .bind(with: self) { [weak self] owner, count in
+                self?.label.text = String(count)
+            }
+            .disposed(by: disposeBag)
     }
     
     override func viewDidLoad() {
