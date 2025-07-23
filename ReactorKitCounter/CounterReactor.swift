@@ -14,7 +14,8 @@ final class CounterReactor: Reactor {
     }
     
     enum Mutation {
-        
+        case increaseCount
+        case decreaseCount
     }
     
     struct State {
